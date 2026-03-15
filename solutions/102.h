@@ -15,6 +15,9 @@ struct TreeNode {
 class Solution {
  public:
   std::vector<std::vector<int>> levelOrder(TreeNode* __root) {
+    if (__root == nullptr) {
+      return {};
+    }
     std::vector<std::vector<int>> ans;
     std::vector<TreeNode*> cur{__root};
     while (cur.size()) {
